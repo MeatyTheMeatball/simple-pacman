@@ -109,7 +109,7 @@ function playGame() {
 
     // Update Pac-Man position and animation
     if (rightDown) {
-        if (pacX < 475) {
+        if (pacX < 475 && !gameOver) {
             pacX += pacmanSpeed;
             key = (key + 1) % right.length;
             pacman = right[key];
@@ -117,7 +117,7 @@ function playGame() {
         }
     }
     if (leftDown) {
-        if (pacX > 25) {
+        if (pacX > 25 && !gameOver) {
             pacX -= pacmanSpeed;
             key = (key + 1) % left.length;
             pacman = left[key];
@@ -125,7 +125,7 @@ function playGame() {
         }
     }
     if (upDown) {
-        if (pacY > 25) {
+        if (pacY > 25 && !gameOver) {
             pacY -= pacmanSpeed;
             key = (key + 1) % up.length;
             pacman = up[key];
@@ -133,7 +133,7 @@ function playGame() {
         }
     }
     if (downDown) {
-        if (pacY < 475) {
+        if (pacY < 475 && !gameOver) {
             pacY += pacmanSpeed;
             key = (key + 1) % down.length;
             pacman = down[key];
@@ -243,16 +243,19 @@ function mousePressed()
                 difficulty = 1; // Easy
                 initializeGame();
                 mode = 2; // Start game
+                pacman = right[0]
                 loop(); 
             } else if (mouseY > height / 2 - 25 && mouseY < height / 2 + 25) {
                 difficulty = 2; // Medium
                 initializeGame();
                 mode = 2; // Start game
+                pacman = right[0]
                 loop(); 
             } else if (mouseY > height / 2 + 50 && mouseY < height / 2 + 100) {
                 difficulty = 3; // Hard
                 initializeGame();
                 mode = 2; // Start game
+                pacman = right[0]
                 loop(); 
             }
         }
