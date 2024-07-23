@@ -5,8 +5,8 @@ let down = [];
 let death = [];
 let frameR = ["pacman1.png", "pacman2.png", "pacman3.png"];
 let frameL = ["pacmanL1.png", "pacmanL2.png", "pacmanL3.png"];
-let frameU = ["pacmanU1.png", "pacmanU2.png"];
-let frameD = ["pacmanD1.png", "pacmanD2.png"];
+let frameU = ["pacmanU1.png", "pacmanU2.png", "pacmanU3.png"];
+let frameD = ["pacmanD1.png", "pacmanD2.png", "pacmanD3.png"];
 let frameDeath = ["death1.png", "death2.png", "death3.png", "death4.png", "death5.png", "death6.png", "death7.png", "death8.png", "death9.png", "death10.png"]
 let pacman;
 let key = 0;
