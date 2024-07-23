@@ -205,6 +205,7 @@ function showDeathAnimation() {
     if (deathAnimationFrame < death.length) {
         //image(death[deathAnimationFrame], pacX, pacY, 50, 50);
         pacman = death[deathAnimationFrame]
+        pacmanSpeed = 0
         if (frameCount % 5 == 0) { // Slow down the animation
             deathAnimationFrame++;
         }
